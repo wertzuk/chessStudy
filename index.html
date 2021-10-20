@@ -1,0 +1,786 @@
+<html lang="de">
+  <head>
+	<meta charset="utf-8"/>
+    <title>Chess</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+	<script src="js/chessboard-0.3.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	
+    
+  </head>
+  <body>
+	
+	
+	<div id="begin">
+	
+		<div id="p1" class="tab">
+			<p class="text">
+			Vielen Dank, dass Sie an dieser Studie zum Thema „Schach und Gedächtnis“ teilnehmen. 
+			Die Teilnahmebedingungen sind, dass Sie in einem deutschen Schachverein gemeldet sind, mindestens 20 
+			DWZ-Auswertungen haben und mindestens 18 Jahre alt sind. Die Studie hat eine Dauer von ca. 20-30
+			Minuten. Da Sie sich beim Durchführen der Studie konzentrieren müssen, führen Sie diese bitte an einem Stück, ohne 
+			größere Unterbrechungen und an einem Ort durch, an dem Sie ruhig und ungestört sind. Führen Sie die Studie 
+			nach Möglichkeit an einem PC/Laptop durch und benutzen Sie dabei eine Maus. Um die Auswertbarkeit und Qualität 
+			Ihrer Daten zu gewährleisten, lesen Sie sich bitte alle Instruktionen genau durch und befolgen Sie diese gewissenhaft. 
+			Ihre Daten werden anonymisiert, sodass keine Rückschlüsse auf Ihre Person möglich sind. Alle Ergebnisse werden später über 
+			viele Personen hinweg gemittelt und nur mit diesen Mittelwerten weiter gearbeitet. Sie gelangen jeweils zur nächsten Seite, 
+			indem Sie auf den Weiter-Button klicken.
+			</p>
+			
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p2" class="tab"> 
+			<div class="form">
+				<form id="f1" method="post" action="">
+					Bitte erstellen Sie zunächst Ihren persönlichen Versuchspersonen-Code. 
+					Dieser dient dazu, die Daten anonymisiert zu erfassen.<br><br>
+					<label for="feld1">1. Zweiter Buchstabe des Vornamens der Mutter:</label><br>
+					<input class="letter" type="text" name="feld1"><br>
+					
+					<label for="feld2">2. Dritter Buchstabe des Vornamens des Vaters</label><br>
+					<input class="letter" type="text" name="feld2"><br>
+					
+					<label for="feld3">3. Der erste Buchstabe Ihres Geburtsortes</label><br> 
+					<input class="letter" type="text" name="feld3"><br>
+					
+					<label for="feld4">4. Ihr eigener GeburtsTAG (nur der Tag, und zwar zweistellig, 
+					   also z.B. „09“, falls Sie am 9. Tag eines Monats geboren sind)</label><br>
+					<input type="number" name="feld4"><br>
+					
+					<label for="feld5">Geben Sie hier Ihren vollständigen Versuchspersonen-Code ein:</label><br>
+					<input class="letter" id="code" type="text" name="feld5"><br>
+					
+					
+					
+					(Beispiel:
+					Vorname der Mutter: M<strong>A</strong>rtina<br>
+					Vorname des Vaters: Pe<strong>T</strong>er<br>
+					Ihr Geburtsort: <strong>B</strong>erlin<br>
+					Ihr eigener Geburtstag: <strong>07</strong>.12.1974<br>
+					→ Ihr VP-Code: <strong>ATB07</strong>)“
+					
+					
+				</form>	
+
+				<button type="submit" class="btn">Weiter</button>
+				
+				
+			</div>		
+		</div>
+
+		<div id="p3" class="tab">
+			<div class="form">
+				<form id="f2" method="post" action=""> 
+					Bitte machen Sie zunächst folgende Angaben:<br><br>
+					
+					<label for="feld5">1. Wie alt sind Sie?</label><br>
+					<input type="number" name="feld5"><br>
+					
+					<label for="feld6">2. Welches Geschlecht haben Sie (m/w/d)?</label><br>
+					<input type="text" name="feld6"><br>
+					
+					<label for="feld7">3. Wie ist Ihre aktuelle DWZ? </label><br>
+					<input type="number" name="feld7"><br>
+					
+					<label for="feld8">4. Wie viele DWZ-Auswertungen haben Sie aktuell? 
+					Beispielsweise bedeutet „1564-38“, dass Sie 38 DWZ-Auswertungen haben. Wenn Sie die Anzahl 
+					Auswertungen nicht kennen, tragen Sie 0 ein. </label><br> 
+					<input type="number" name="feld8"><br>
+					
+					<label for="feld9">5. Wie alt (ganzzahlig in Jahren) waren Sie, als Sie die Schachregeln erlernt haben? 
+					Falls Sie sie nicht erinnern können, schätzen Sie!</label><br>
+					<input type="number" name="feld9"><br>
+					
+					<label for="feld10">6. Wie alt (ganzzahlig in Jahren) waren Sie, als Sie erstmals in einem Schachverein eingetreten sind? 
+					Falls Sie sie nicht erinnern können, schätzen Sie!</label><br>
+					<input type="number" name="feld10"><br>
+				</form>
+				
+				<button type="submit" class="btn">Weiter</button>
+			</div>
+		</div>
+	
+		<div id="p4" class="tab">
+			<p class="text">Sie werden in dieser Studie Schachstellungen sehen, die jeweils 20 Sekunden 
+			lang präsentiert werden und die Sie sich merken sollen, um sie später zu rekonstruieren. 
+			Hierfür müssen Sie dann die Figuren, die Sie ober- und unterhalb des eingeblendeten leeren 
+			Schachbrettes sehen,  mit der Maus auf das jeweilige Feld ziehen. Wenn Sie eine Figur von 
+			einem Feld wieder entfernen wollen, ziehen Sie diese mit der linken Maustaste zurück auf das 
+			entsprechende Symbol. Damit Sie sich mit dem Platzieren der Figuren vertraut machen können, 
+			folgt nun ein Probedurchgang:
+			</p>
+			
+			<button type="submit" class="btn">Weiter</button>
+		</div>
+		
+		<div id="p5" class="tab">
+			<p class="text"><strong>Probedurchdang</strong><br><br>Es folgt gleich eine Schachstellung, die 20 Sekunden lang präsentiert wird. 
+			 Merken Sie sich diese bitte möglichst genau, da Sie sich später an 
+			 diese erinnern sollen.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>
+
+		<div id="p6" class="tab">
+			<div id="board1" class="stellung"></div>
+			
+		</div>
+		
+		<div id="p7" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die gerade gesehene Stellung so gut wie möglich!
+			Dafür haben Sie zwei Minuten Zeit. Dazu erscheint gleich ein Brett mit darüber und 
+			darunter abgebildeten Figuren, die Sie mit der linken Maustaste auf das richtige Feld 
+			ziehen und durch Loslassen der linken Maustaste dort platzieren können. Rekonstruieren 
+			Sie die Stellung dabei so, wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch 
+			gesetzte Figuren sind dabei nicht schlimm.
+			</p>
+			
+			<button type="submit" class="btn">Weiter</button>
+		</div>
+		
+		
+		<div id="p8" class="tab">
+			<div id="recBoard" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>
+			
+		</div>
+		
+			
+		
+		<div id="p9" class="tab">
+			<p class="text">Nachdem Sie sich mit dem Rekonstruieren der Stellungen vertraut gemacht haben, 
+			beginnt nun die eigentliche Studie. Auch hier werden Sie Stellungen sehen, die jeweils 20 
+			Sekunden lang präsentiert werden. Das Rekonstruieren der Stellungen erfolgt hier im Gegensatz
+			zum Probedurchgang jedoch nicht unmittelbar danach. Rekonstruieren Sie die Stellungen jeweils so,
+			wie Sie denken, dass sie gewesen sein könnten. Eventuell falsch gesetzte Figuren sind hierbei 
+			nicht schlimm.
+			</p>
+			
+			<button id="gruppe" class="btn">Weiter</button>
+		</div>
+	</div>
+	
+	<div id="DF"> <!-- Directed Forgetting-->
+		<div id="p10" class="tab">
+			<p class="text"><strong>Durchgang 1</strong><br><br>
+			Es folgt gleich eine Schachstellung, die 20 Sekunden lang präsentiert wird. Merken Sie sich diese 
+			bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p11" class="tab">
+			<div id="DF1" class="stellung"></div>
+		</div>
+		
+		<div id="p12" class="tab">
+			<p class="text">Sie haben soeben die erste Stellung gesehen. Es folgt die nächste zu merkende Schachstellung, 
+			welche ebenfalls 20 Sekunden lang präsentiert wird. Bitte behalten Sie währenddessen die zuvor gelernte 
+			Stellung im Gedächtnis, da Sie sich später an beide Stellungen erinnern sollen.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p13" class="tab">
+			<div id="DF2" class="stellung"></div>
+		</div>
+		
+		<div id="p14" class="tab">
+			<p class="text">Bitte behalten Sie die gesehenen Schachstellungen im Gedächtnis. Sie werden sich gleich 
+			an diese erinnern müssen.
+			</p>				
+			<button class="btn">Weiter</button>			
+		</div>
+		
+		<div id="p15" class="tab">
+			<p class="text">Auf der nächsten Seite wird Ihnen gleich eine dreistellige Zahl eingeblendet. Bitte 
+			zählen Sie im Kopf in Dreierschritten von dieser Zahl herunter, bis automatisch die nächste Seite 
+			eingeblendet wird.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p16" class="tab">
+			<p class="num"><strong>955</strong></p>
+			
+		</div>
+		
+		<div id="p17" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZULETZT gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p18" class="tab">
+			<div id="recDF_1" class="rec"></div>
+			
+			<button type="submit"  class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p19" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZUERST gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p20" class="tab">
+			<div id="recDF_2" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p21" class="tab">
+			<p class="text">Sie werden gleich Zahlenreihen sehen, die nach einem bestimmten Schema aufgebaut sind,
+			und die sie mit der richtigen Zahl vervollständigen sollen. Bearbeiten Sie diese eine Minute lang, bis 
+			automatisch die nächste Seite erscheint. 
+			</p>
+			
+			<button class="btn">Weiter</button>	
+		</div>
+
+		<div id="p22" class="tab">
+			
+			<p class="zahlen">
+				Die folgenden Zahlenreihen sind nach einem bestimmten Schema aufgebaut. 
+				Welche Zahl setzt die Reihe jeweils logisch fort?<br><br>
+				7 – 18 – 12 – 23 – 17 – 28 – 22 - <input type="number"><br>
+				1 – 4 – 9 – 16 - 25 - <input type="number"><br>
+				1 – 5 - 14 - 30 - 55 - <input type="number"><br>
+				45 – 15 – 18 – 6 – 9 -  <input type="number"><br>
+				121 -  11 – 16 – 4 – 9 – <input type="number"><br>
+				1 – 1 – 2 – 3 – 5 - <input type="number"><br>
+				85 – 13 – 26 – 8 – 16 - <input type="number"><br>
+				15 – 29 – 56 – 108 – 208 - <input type="number"><br>
+				1 – 10 – 37 – 82 – 145 - <input type="number"><br>
+				144 – 73 – 14 – 8 – 236 - <input type="number"><br>
+			</p>		
+				
+			
+			
+		</div>
+		
+		<div id="p23" class="tab">
+			<p class="text"><strong>Durchgang 2</strong><br><br>
+			Es folgt ein neuer Durchgang. Alle bisher präsentierten Stellungen spielen nun keine Rolle mehr.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p24" class="tab">
+			<p class="text"><strong></strong><br><br>
+			Es folgt gleich eine Schachstellung, die 20 Sekunden lang präsentiert wird. Merken Sie sich diese 
+			bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p25" class="tab">
+			<div id="DF3" class="stellung"></div>				
+		</div>
+		
+		<div id="p26" class="tab">
+			<p class="text">
+			Dies war die erste Stellung des Durchgangs. Entgegen der vorherigen Instruktion muss die 
+			soeben gelernte Stellung später doch nicht mehr erinnert werden. Vergessen Sie diese gerne wieder 
+			und konzentrieren Sie sich stattdessen voll und ganz auf die folgende Stellung. Lediglich diese 
+			wird am Ende des Durchganges abgefragt.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p27" class="tab">
+			<p class="text">Es folgt die nächste Schachstellung, welche ebenfalls 20 Sekunden lang präsentiert wird. 
+			Merken Sie sich diese bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p28" class="tab">
+			<div id="DF4" class="stellung"></div>
+		</div>
+		
+		<div id="p29" class="tab">
+			<p class="text">Bitte behalten Sie die zuletzt gesehene Schachstellung im Gedächtnis. Sie werden 
+			sich gleich an diese erinnern müssen.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p30" class="tab">
+			<p class="text">Auf der nächsten Seite wird Ihnen gleich eine dreistellige Zahl eingeblendet. Bitte 
+			zählen Sie im Kopf in Dreierschritten von dieser Zahl herunter, bis automatisch die nächste Seite 
+			eingeblendet wird.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p31" class="tab">
+			<p class="num"><strong>686</strong></p>
+		</div>
+		
+		<div id="p32" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZULETZT gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p33" class="tab">
+			<div id="recDF_3" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p34" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZUERST 
+			gelernte Stellung trotz der vorherigen Instruktion, diese zu vergessen. Dafür 
+			haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, wie Sie 
+			denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen 
+			kein Problem dar. Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken 
+			Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		<div id="p35" class="tab">
+			<div id="recDF_4" class="rec"></div>
+			
+			<button type="submit" id="done" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p36" class="tab">
+			<p class="text" id="ergebnis">Sie haben nun alle Stellungen erfolgreich durchlaufen. 
+			Bevor Sie gleich Ihre Ergebnisse einsehen können, beantworten Sie bitte ein paar letzte Fragen:
+			</p>	
+
+			<button type="submit" class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p37" class="tab">
+			<div class="form2">
+				<form id="f3" method="post" action="">
+					<label for="trust">1. Wie stark haben Sie im Vergessensdurchgang der Information vertraut, dass die erste Stellung später 
+					nicht mehr abgefragt wird? (1 = gar nicht; 5 = absolut)</label><br>
+					<input type="number" name="trust"></input><br>
+					
+					<label for="strat">2. Beschreiben Sie stichwortartig, welche Strategien Sie im Vergessensdurchgang angewandt haben, um die erste Stellung zu vergessen. 
+					Falls Sie nichts Besonderes getan haben, schreiben Sie einfach "nichts".</label><br>
+					<textarea class="strategy" type="text" name="strat"></textarea><br>
+					
+					<label for="forget">3. Wie gut waren Sie im Vergessensdurchgang in der Lage, die erste Stellung zu vergessen? (1 = gar nicht; 5 = absolut)</label><br>
+					<input type="number" name="forget"></input>
+				</form>
+			</div>
+			
+			<button type="submit" id="done" class="btn">Weiter</button>				
+		</div>
+
+				
+		
+		<div id="p38" class="tab"> 
+			<p class="text">
+				Hier sind Ihre Ergebnisse:<br><br>
+				Durchgang 1:&emsp;&emsp;Stellung 2: <span id="df11"></span>&emsp;&emsp;Stellung 1: <span id="df12"></span><br>
+				Durchgang 2:&emsp;&emsp;Stellung 2: <span id="df21"></span>&emsp;&emsp;Stellung 1: <span id="df22"></span><br><br><br><br>
+				Sie haben die Studie erfolgreich beendet. Vielen Dank für Ihre Teilnahme! Sie können das Fenster nun schließen.
+			</p>
+			
+				
+			
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	<div id="SEM">
+		<div id="p100" class="tab">
+			<p class="text">
+			In jedem Durchgang werden Sie zwei Stellungen präsentiert bekommen, die Sie beide lernen und 
+			später rekonstruieren sollen. In manchen Durchgängen bekommen Sie die Möglichkeit, sich diese 
+			Aufgabe etwas zu erleichtern, indem Sie die erste Stellung des Durchgangs abspeichern. Das führt 
+			dazu, dass Sie diese Stellung später ein zweites Mal sehen und lernen können, und zwar direkt bevor 
+			Sie diese zu rekonstruieren haben. In anderen Durchgängen bekommen Sie diese Speichermöglichkeit nicht. 
+			In diesen Durchgängen müssen Sie sich demnach beide Stellungen durchweg selbst merken. Ob Sie die 
+			erste Stellung speichern können oder nicht, erfahren Sie nach deren Lernphase.
+			</p>
+			<button class="btn">Weiter</button>
+		</div>
+		
+		
+		<div id="p101" class="tab">
+			<p class="text"><strong>Durchgang 1</strong><br><br>
+			Es folgt gleich eine Schachstellung, die 20 Sekunden lang präsentiert wird. Merken Sie sich diese 
+			bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			
+			<button class="btn">Weiter</button>				
+		</div>	
+		
+		<!--Save Durchgang-->
+		
+		<div id="p102" class="tab">
+			<div id="SEM5" class="stellung"></div>				
+		</div>
+		
+		<div id="p103" class="tab">
+			<div id="SEM7" class="stellung"></div>				
+		</div>
+		
+		<div id="p104" class="tab">
+			<p class="text">
+			Sie haben soeben die erste Stellung dieses Durchganges gesehen. In diesem Durchgang dürfen Sie diese 
+			erste Stellung abspeichern. Drücken Sie hierfür gleich den Button am Ende der Seite. Hierdurch bekommen 
+			Sie die Möglichkeit, diese Stellung ein zweites Mal zu lernen, und zwar direkt bevor Sie diese rekonstruieren 
+			sollen.
+			</p>
+			
+			<button class="btn">Stellung speichern und Weiter</button>
+		</div>	
+		
+		<div id="p105" class="tab">
+			<p class="text">Es folgt die nächste Schachstellung, welche ebenfalls 20 Sekunden lang präsentiert wird. 
+			Merken Sie sich diese bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p106" class="tab">
+			<div id="SEM6" class="stellung"></div>
+		</div>
+		
+		<div id="p107" class="tab">
+			<div id="SEM8" class="stellung"></div>
+		</div>
+		
+		<div id="p108" class="tab">
+			<p class="text">Bitte behalten Sie die zuletzt gesehene Schachstellung im Gedächtnis. Sie werden 
+			sich gleich an diese erinnern müssen.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p109" class="tab">
+			<p class="text">Auf der nächsten Seite wird Ihnen gleich eine dreistellige Zahl eingeblendet. Bitte 
+			zählen Sie im Kopf in Dreierschritten von dieser Zahl herunter, bis automatisch die nächste Seite 
+			eingeblendet wird.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p110" class="tab">
+			<p class="num"><strong>686</strong></p>
+		</div>
+		
+		<div id="p111" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZULETZT gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p112" class="tab">
+			<div id="recSEM_6" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p113" class="tab">
+			<div id="recSEM_8" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p114" class="tab">
+			<p class="text">Wie versprochen, haben Sie nun die Möglichkeit, die in diesem Durchgang als 
+			erstes präsentierte Stellung ein weiteres Mal 20 Sekunden lang zu betrachten, bevor Sie 
+			diese rekonstruieren sollen.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		
+		<div id="p115" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZUERST gelernte bzw. 
+			die soeben ein weiteres Mal gelernte Stellung. Dafür haben Sie zwei Minuten Zeit. Rekonstruieren 
+			Sie die Stellung dabei so, wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte 
+			Figuren stellen kein Problem dar. Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, 
+			drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>
+			
+		</div>
+		<div id="p116" class="tab">
+			<div id="recSEM_5" class="rec"></div>
+			
+			<button type="submit" id="done" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p117" class="tab">
+			<div id="recSEM_7" class="rec"></div>
+			
+			<button type="submit" id="done" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p118" class="tab">
+			<p class="text">Sie werden gleich Zahlenreihen sehen, die nach einem bestimmten Schema aufgebaut sind,
+			und die sie mit der richtigen Zahl vervollständigen sollen. Bearbeiten Sie diese eine Minute lang, bis 
+			automatisch die nächste Seite erscheint. 
+			</p>
+			
+			<button class="btn">Weiter</button>	
+		</div>
+		
+		
+		<!--Zahlenreihen-->
+
+		<div id="p151" class="tab">
+			
+			<p class="zahlen">
+				Die folgenden Zahlenreihen sind nach einem bestimmten Schema aufgebaut. 
+				Welche Zahl setzt die Reihe jeweils logisch fort?<br><br>
+				7 – 18 – 12 – 23 – 17 – 28 – 22 - <input type="number"><br>
+				1 – 4 – 9 – 16 - 25 - <input type="number"><br>
+				1 – 5 - 14 - 30 - 55 - <input type="number"><br>
+				45 – 15 – 18 – 6 – 9 -  <input type="number"><br>
+				121 -  11 – 16 – 4 – 9 – <input type="number"><br>
+				1 – 1 – 2 – 3 – 5 - <input type="number"><br>
+				85 – 13 – 26 – 8 – 16 - <input type="number"><br>
+				15 – 29 – 56 – 108 – 208 - <input type="number"><br>
+				1 – 10 – 37 – 82 – 145 - <input type="number"><br>
+				144 – 73 – 14 – 8 – 236 - <input type="number"><br>
+			</p>		
+		</div>
+		
+		<div id="p152" class="tab">
+			<p class="zahlen">
+				Die folgenden Zahlenreihen sind nach einem bestimmten Schema aufgebaut. 
+				Welche Zahl setzt die Reihe jeweils logisch fort?<br><br>
+				3 – 4 – 6 – 9 – 13 – 18 – 24 - <input type="number"><br>
+				68 – 34 – 36  - 18 – 20 – 10 – 12 <input type="number"><br>
+				1 – 3 - 7 – 15 – 31 -  <input type="number"><br>
+				1 – 3 – 7 – 11 – 13 -  <input type="number"><br>
+				1 - 2 – 6 - 30 – 210 - <input type="number"><br>
+				2 – 2 – 4 – 6 – 12 – 14 – 28 – 30 -  <input type="number"><br>
+				18 – 6 – 24 – 8 – 32 -  <input type="number"><br>
+				10 – 45 – 15 – 38 – 20 -  <input type="number"><br>
+				108 – 56 – 29 – 15 – 8 -  <input type="number"><br>
+				
+			</p>	
+		</div>
+		
+		<div id="p153" class="tab">
+			<p class="zahlen">
+				Die folgenden Zahlenreihen sind nach einem bestimmten Schema aufgebaut. 
+				Welche Zahl setzt die Reihe jeweils logisch fort?<br><br>
+				4 – 16 – 64 – 256 – 1024 -  <input type="number"><br>
+				1 – 3 – 7 – 13 – 21 -  <input type="number"><br>
+				52 – 56 – 48 – 64 – 32 -  <input type="number"><br>
+				3 – 12 – 24 – 33 – 66 -  <input type="number"><br>
+				3 – 75 – 13 – 70 – 23 – 65 – 33 – 60 -  <input type="number"><br>
+				2 – 5 – 10 – 17 – 28 -  <input type="number"><br>
+				4 – 5 – 3 – 6 -  7 – 5 – 8 - <input type="number"><br>
+				144 – 73 – 14 – 8 – 32 -   <input type="number"><br>
+				3 – 8 – 23 – 68 – 203 -  <input type="number"><br>
+				99 – 18 – 36 – 9 – 18 -  <input type="number">
+			</p>		
+		</div>
+		
+		<div id="p154" class="tab">
+			<p class="text"><strong></strong><br><br>
+			Es folgt ein neuer Durchgang. Alle bisher präsentierten Stellungen spielen nun keine Rolle mehr.
+			</p>
+			
+			<button class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p155" class="tab">
+			<p class="text">Sie haben nun alle Stellungen erfolgreich durchlaufen. 
+			Bevor Sie gleich Ihre Ergebnisse einsehen können, beantworten Sie bitte ein paar letzte Fragen:
+			</p>	
+
+			<button type="submit" class="btn">Weiter</button>
+		</div>	
+		
+		<div id="p156" class="tab">
+			<div class="form2">
+				<form id="f4" method="post" action="">
+					<label for="trust">1. Wie stark haben Sie in den Speicherdurchgängen der Information vertraut, dass die erste Stellung später 
+					nicht mehr abgefragt wird?<br> (1 = gar nicht; 5 = absolut)</label><br>
+					<input type="number" name="trust"></input><br>
+					
+					<label for="strat">2. Beschreiben Sie stichwortartig, welche Strategien Sie in den Speicherdurchgängen angewandt haben, um die erste Stellung zu vergessen. 
+					Falls Sie nichts Besonderes getan haben, schreiben Sie einfach "nichts".</label><br>
+					<textarea class="strategy" type="text" name="strat"></textarea><br>
+					
+					<label for="forget">3. Wie gut waren Sie im Vergessensdurchgang in der Lage, die erste Stellung zu vergessen? <br>(1 = gar nicht; 5 = absolut)</label><br>
+					<input type="number" name="forget"></input>
+				</form>
+			</div>
+			
+			<button type="submit" id="done" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p157" class="tab"> 
+			<p class="text">
+				Hier sind Ihre Ergebnisse:<br><br>
+				Durchgang 1:&emsp;&emsp;Stellung 2: <span id="d11"></span>&emsp;&emsp;Stellung 1: <span id="d12"></span><br>
+				Durchgang 2:&emsp;&emsp;Stellung 2: <span id="d21"></span>&emsp;&emsp;Stellung 1: <span id="d22"></span><br>
+				Durchgang 3:&emsp;&emsp;Stellung 2: <span id="d31"></span>&emsp;&emsp;Stellung 1: <span id="d32"></span><br>
+				Durchgang 4:&emsp;&emsp;Stellung 2: <span id="d41"></span>&emsp;&emsp;Stellung 1: <span id="d42"></span><br><br><br><br>
+				Sie haben die Studie erfolgreich beendet. Vielen Dank für Ihre Teilnahme! Sie können das Fenster nun schließen.
+			</p>
+		
+		</div>
+		
+		
+		
+		<!--No Save Durchgaenge-->
+		
+		
+		
+		
+		<div id="p200" class="tab">
+			<p class="text"><strong>Durchgang 1</strong><br><br>
+			Es folgt gleich eine Schachstellung, die 20 Sekunden lang präsentiert wird. Merken Sie sich diese 
+			bitte möglichst genau, da Sie sich später an diese erinnern sollen.
+			</p>
+			
+			<button class="btn">Weiter</button>				
+		</div>	
+		
+		<div id="p201" class="tab">
+			<div id="SEM1" class="stellung"></div>
+		</div>
+		
+		<div id="p202" class="tab">
+			<div id="SEM3" class="stellung"></div>
+		</div>
+		
+		<div id="p203" class="tab">
+			<p class="text">Sie haben soeben die erste Stellung gesehen. In diesem Durchgang dürfen Sie diese 
+			Stellung leider nicht abspeichern und bekommen für diese keine weitere Lernmöglichkeit. Das bedeutet, 
+			Sie müssen sich diese Stellung merken, bis sie am Ende des Durchganges zu rekonstruieren ist. Es folgt 
+			die nächste zu merkende Schachstellung, welche ebenfalls 20 Sekunden lang präsentiert wird.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p204" class="tab">
+			<div id="SEM2" class="stellung"></div>
+		</div>
+		
+		<div id="p205" class="tab">
+			<div id="SEM4" class="stellung"></div>
+		</div>
+		
+		<div id="p206" class="tab">
+			<p class="text">Bitte behalten Sie die gesehenen Schachstellungen im Gedächtnis. Sie werden sich gleich 
+			an diese erinnern müssen.
+			</p>				
+			<button class="btn">Weiter</button>			
+		</div>
+		
+		<div id="p207" class="tab">
+			<p class="text">Auf der nächsten Seite wird Ihnen gleich eine dreistellige Zahl eingeblendet. Bitte 
+			zählen Sie im Kopf in Dreierschritten von dieser Zahl herunter, bis automatisch die nächste Seite 
+			eingeblendet wird.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p208" class="tab">
+			<p class="num"><strong>955</strong></p>	
+		</div>
+		
+		<div id="p209" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZULETZT gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p210" class="tab">
+			<div id="recSEM_2" class="rec"></div>
+			
+			<button type="submit"  class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p211" class="tab">
+			<div id="recSEM_4" class="rec"></div>
+			
+			<button type="submit"  class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p212" class="tab">
+			<p class="text">Bitte rekonstruieren Sie nun die in diesem Durchgang ZUERST gelernte Stellung 
+			so gut, wie möglich! Dafür haben Sie zwei Minuten Zeit. Rekonstruieren Sie die Stellung dabei so, 
+			wie Sie denken, dass sie gewesen sein könnte. Eventuell falsch gesetzte Figuren stellen kein Problem dar. 
+			Falls Sie bereits vor Ablauf der zwei Minuten fertig sind, drücken Sie auf den Weiter-Button.
+			</p>
+			<button class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p213" class="tab">
+			<div id="recSEM_1" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p214" class="tab">
+			<div id="recSEM_3" class="rec"></div>
+			
+			<button type="submit" class="btn">Weiter</button>				
+		</div>
+		
+		<div id="p215" class="tab">
+			<p class="text">Sie werden gleich Zahlenreihen sehen, die nach einem bestimmten Schema aufgebaut sind,
+			und die sie mit der richtigen Zahl vervollständigen sollen. Bearbeiten Sie diese eine Minute lang, bis 
+			automatisch die nächste Seite erscheint. 
+			</p>
+			
+			<button class="btn">Weiter</button>	
+		</div>
+			
+		
+	
+	</div>	
+	
+	
+	<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+  </body>
+</html>
+	
+	
